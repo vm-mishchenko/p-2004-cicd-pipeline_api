@@ -5,7 +5,3 @@ steps:
   - name: node
     entrypoint: npm
     args: [ 'test' ]
-
-  # Build the container image
-  - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/p-google-cloud-run-nodejs', '.' ]
