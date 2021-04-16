@@ -1,0 +1,9 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/api_$COMMIT_SHA', '.' ]
+
+  # Push the container image to Container Registry
+  # $PROJECT_ID and other values: https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', 'gcr.io/$PROJECT_ID/api_$COMMIT_SHA' ]
