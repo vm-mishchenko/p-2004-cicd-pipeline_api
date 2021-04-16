@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'src/**/**spec.js'",
+    "build-image": "docker build -t vmmishchenko/p-dev-pipeline-api ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vm-mishchenko/p-dev-pipeline-api/issues"
   },
-  "homepage": "https://github.com/vm-mishchenko/p-dev-pipeline-api#readme"
+  "homepage": "https://github.com/vm-mishchenko/p-dev-pipeline-api#readme",
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  }
 }
