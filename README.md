@@ -14,7 +14,11 @@ gcloud builds submit --config cloudbuild-master-push.yaml --substitutions COMMIT
 - [GCP - Running bash scripts](https://cloud.google.com/build/docs/configuring-builds/run-bash-scripts)
 - [How to pass data between Cloud Build steps](https://medium.com/google-cloud/how-to-pass-data-between-cloud-build-steps-de5c9ebc4cdd)
 
+- [One build call another build](https://stackoverflow.com/questions/59282760/how-to-link-cloudbuild-yaml-from-different-repository-google-cloud-build-trigge)
+- [How to pass API parameters to GCP cloud build triggers](https://stackoverflow.com/questions/59804109/how-to-pass-api-parameters-to-gcp-cloud-build-triggers)
+
 Builder service account roles to Deploy to Cloud Run:
 - Cloud Build Service Account
 - Service Account User
-- Cloud Run Admin 
+- Cloud Run Admin
+

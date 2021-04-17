@@ -7,3 +7,14 @@ steps:
   # $PROJECT_ID and other values: https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'gcr.io/$PROJECT_ID/api_$COMMIT_SHA' ]
+
+  # Trigger Infrastructure build that will update Image version to new one
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        NEW_IMAGE_NAME=api_$COMMIT_SHA
+        TRIGGER_ID=81a56127-a08a-4ff6-b40b-22197cffc411
+        GCP_ACCESS_TOKEN=$(gcloud config config-helper --format='value(credential.access_token)')
+        curl -d '{"substitutions": {"_IMAGE_NAME": "$NEW_IMAGE_NAME"}}' -X POST -H "Content-type: application/json" -H "Authorization: Bearer $GCP_ACCESS_TOKEN" https://cloudbuild.googleapis.com/v1/projects/$PROJECT_ID/triggers/$TRIGGER_ID:run
