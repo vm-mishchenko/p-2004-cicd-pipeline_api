@@ -14,6 +14,6 @@ steps:
     args:
       - '-c'
       - |
-        TRIGGER_ID=81a56127-a08a-4ff6-b40b-22197cffc411
-        GCP_ACCESS_TOKEN=$(gcloud config config-helper --format='value(credential.access_token)')
-        curl -d '{"substitutions": {"_IMAGE_NAME": "api_$COMMIT_SHA"}}' -X POST -H "Content-type: application/json" -H "Authorization: Bearer $GCP_ACCESS_TOKEN" https://cloudbuild.googleapis.com/v1/projects/$PROJECT_ID/triggers/$TRIGGER_ID:run
+        trigger_id=81a56127-a08a-4ff6-b40b-22197cffc411
+        gcp_access_token=$(gcloud config config-helper --format='value(credential.access_token)')
+        curl -d '{"substitutions": {"_IMAGE_NAME": "api_$COMMIT_SHA"}}' -X POST -H "Content-type: application/json" -H "Authorization: Bearer $gcp_access_token" https://cloudbuild.googleapis.com/v1/projects/$PROJECT_ID/triggers/$trigger_id:run
