@@ -12,8 +12,8 @@ To explore several ideas:
 ## How
 ### How application can be design and structured when CI/CD configuration lives in a different repo
 On each commit to master Google Cloud Build creates a new Docker image and sends a request
-to [p-2004-cicd-pipeline_api-infrastructure](https://github.com/vm-mishchenko/p-2004-cicd-pipeline_api-infrastructure) repo to
-update current App version.
+to [p-2004-cicd-pipeline_api-infrastructure](https://github.com/vm-mishchenko/p-2004-cicd-pipeline_api-infrastructure)
+repo to update current App version.
 
 ### Set up checks on Pull requests, e.g. build project, run tests
 - Install GitHub Google Cloud Build application
@@ -26,7 +26,8 @@ Google Cloud Build allows listening to repository branch and execute build [pipe
 
 ### Deploy image on each commit
 CD part covered
-by [p-2004-cicd-pipeline_api-infrastructure](https://github.com/vm-mishchenko/p-2004-cicd-pipeline_api-infrastructure) repo.
+by [p-2004-cicd-pipeline_api-infrastructure](https://github.com/vm-mishchenko/p-2004-cicd-pipeline_api-infrastructure)
+repo.
 
 ## Tech details
 `gcloud builds submit` - test gcp build.
