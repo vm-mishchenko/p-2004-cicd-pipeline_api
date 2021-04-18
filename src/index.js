@@ -7,7 +7,7 @@ const auth = new GoogleAuth();
 const serviceUrl = 'https://backend-7tt2isxsdq-wl.a.run.app';
 
 const server = http.createServer(function (req, res) {
-  googAuthClient(req, res);
+  googAuthLibrary(req, res);
 });
 
 /**
