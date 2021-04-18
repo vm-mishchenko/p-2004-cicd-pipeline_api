@@ -17,6 +17,11 @@
     "url": "https://github.com/vm-mishchenko/p-dev-pipeline-api/issues"
   },
   "homepage": "https://github.com/vm-mishchenko/p-dev-pipeline-api#readme",
+  "dependencies": {
+    "googleapis": "^71.0.0",
+    "google-auth-library": "^7.0.4",
+    "got": "^11.8.2"
+  },
   "devDependencies": {
     "mocha": "^8.3.2"
   }
