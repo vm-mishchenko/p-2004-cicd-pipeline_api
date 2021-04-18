@@ -2,12 +2,15 @@
 Repo contains simple nodejs app with CI process. CD part described
 in [p-2004-cicd-pipeline_api-infrastructure](https://github.com/vm-mishchenko/p-2004-cicd-pipeline_api-infrastructure).
 
+https://api-7tt2isxsdq-wl.a.run.app
+
 ## Why
 To explore several ideas:
 - How application can be design and structured when CI/CD configuration lives in a different repo
 - Set up checks on Pull requests, e.g. build project, run tests
 - Build Docker image on each commit
 - Deploy image on each commit
+- 
 
 ## How
 ### How application can be design and structured when CI/CD configuration lives in a different repo
